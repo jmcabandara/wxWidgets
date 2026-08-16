@@ -1,4 +1,4 @@
-Below is a complete minimal wxWidgets Hello World GUI project for macOS (Intel) using VS Code + CMake + wxWidgets.
+<b>Complete minimal wxWidgets Hello World GUI project for macOS (Intel) using VS Code + CMake + wxWidgets.</b>
 
 1. Install Prerequisites
 
@@ -16,7 +16,9 @@ Verify installation:
 wx-config --version
 cmake --version
 clang++ --version
+
 Project Structure
+
 HelloWxWidgets/
 ├── CMakeLists.txt
 ├── src/
@@ -25,10 +27,13 @@ HelloWxWidgets/
     ├── settings.json
     ├── tasks.json
     └── launch.json
+
 2. Source Code
+
 src/main.cpp
 
 3. CMake Configuration
+
 CMakeLists.txt
 
 4. VS Code Configuration
@@ -84,3 +89,24 @@ Cmd + Shift + B
 Run Debug:
 
 F5
+
+
+References:
+
+https://forums.wxwidgets.org/viewtopic.php?t=47009
+
+he best way to start with wxWidgets in OSX is:
+
+1. Download and unpack wxWidgets (for example in ~/wxWidgets)
+2. OPen the Terminal
+3. Do following:
+
+cd ~/wxWidgets && mkdir buildOSX && cd buildOSX && ../configure && make && cd samples/minimal && make
+
+After this will successfully finished you know that everything is compiled properly and you can start with building your own software.
+
+In order to do that you do:
+
+cd ~/wxWidgets/buildOSX && ./wx-config --cxxflags
+cd ~/wxWidgets/buildOSX && ./wx-config --libs
+
